@@ -1,0 +1,51 @@
+.box > h3 {
+  text-align: center;
+  margin: 20px 0 40px;
+  font-size: 25px;
+  color: #2196f3;
+  padding: 20px;
+}
+
+.box .info {
+  padding: 15px;
+  position: relative;
+  background-color: #f9f9f9;
+  text-align: right;
+  display: flex;
+
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.box .info::before {
+  content: "" counter(services);
+  position: absolute;
+  background-color: #2196f3;
+  color: white;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 80px;
+  font-size: 27px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 15px;
+}
+
+.box .info::after {
+  content: "";
+  position: absolute;
+  background-color: #d5d5d5;
+  left: 65px;
+  top: 0;
+  width: 50px;
+  height: calc(100% + 0.4px);
+  transform: skewX(-30deg);
+}
+.box .info a {
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: bold;
+}

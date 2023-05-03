@@ -1,0 +1,91 @@
+.sign-up{
+
+    position: relative;
+    height: 100vh;
+    width: 100%;
+   
+    
+ 
+    overflow: hidden;
+   
+    .container{
+        display: flex;
+        top: 18%;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        width: 70%;
+        
+       
+        
+        .login-text{
+            width: 50%;
+            position: relative;
+            background-color: rgb(92, 92, 255);
+            min-height: 100%;
+            padding: 20px;
+            color: white;
+            text-transform: capitalize;
+            text-align: center;
+            overflow: hidden;
+            img{
+                position: absolute;
+                width: 300px;
+                z-index: 0;
+                bottom: -60px;
+            }
+            h2{
+                border-bottom: 2px solid white;
+                padding-bottom: 15px;
+                letter-spacing: 5px;
+                font-size: 32px;
+            }
+            p{
+                margin-top: 80px;
+                color: rgb(217, 221, 224);
+z-index: 3;
+                
+            }
+        }
+        form{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            overflow: scroll;
+        
+            background-color: white;
+            padding: 12px;
+            position: relative;
+            text-align: center;
+            height: 100%;
+            h2{
+                border-bottom: 2px solid rgb(92, 92, 255);
+                padding-bottom: 19px;
+                font-size: 30px;
+            }
+            input{
+                width: 60%;
+                margin: 0 auto;
+                border: none;
+                border-bottom: 2px solid;
+
+                height: 30px;
+                background-color: white;
+             
+            }
+            button{
+                width: 40%;
+                margin: 0 auto ;
+                padding: 15px;
+                background-color:  rgb(92, 92, 255);
+                border-radius: 20px;
+                color: white;
+                cursor: pointer;
+                border: none;
+                font-size: 20px;
+            }
+        
+        }
+    }
+}

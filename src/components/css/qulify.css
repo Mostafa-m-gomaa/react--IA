@@ -1,0 +1,48 @@
+.qualification .job {
+  padding: 40px 10px 10px 10px;
+}
+.qualification .job h1 {
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+.qualification .job h2 {
+  text-transform: capitalize;
+}
+.qualification .job .in-job {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.qualification .job .in-job div {
+  background-color: #2196f3;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.qualification .job .in-job .req {
+  text-align: center;
+}
+.qualification .job .in-job .req span {
+  font-size: 20px;
+  max-width: 20%;
+  margin: 0 auto;
+  text-align: center;
+}
+.qualification .job .in-job .salary {
+  text-align: center;
+}
+.qualification .job .in-job .salary span {
+  font-size: 20px;
+}
+.qualification .job .in-job .salary a {
+  text-decoration: none;
+  background-color: white;
+  color: #2196f3;
+  padding: 10px;
+  font-weight: 800;
+  border-radius: 10px;
+}/*# sourceMappingURL=qulify.css.map */

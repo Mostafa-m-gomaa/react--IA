@@ -1,0 +1,29 @@
+.profile{
+    padding: 10px;
+    h2{
+        text-align: center;
+        margin-bottom: 30px;
+        text-transform: capitalize;
+    }
+    .user-search{
+      
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        gap: 20px;
+        div{
+            width: 20%;
+            background-color: cornflowerblue;
+            color: white;
+            text-transform: capitalize;
+            font-size: 20px;
+            border-radius: 58px;
+            margin-bottom: 20px;
+            div{
+                font-size: 10px;
+                width: 100%;
+            }
+        }
+    }
+}
