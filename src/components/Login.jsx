@@ -47,6 +47,7 @@ const {spinner,setSpinner}=useContext(AppContext)
         setSpinner(false)
         setLogin(true)
         history("/")
+        
         // window.location.reload();
         
         

@@ -1,0 +1,21 @@
+.my-app{
+    padding: 15px;
+    text-transform: capitalize;
+    h2{
+        text-align: center;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .app{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background-color: cadetblue;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+        }
+    }
+}

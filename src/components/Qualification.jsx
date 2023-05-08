@@ -9,15 +9,21 @@ const Qualification = () => {
     const [data,setData]=useState({})
     const {login,setLogin}=useContext(AppContext)
     const {logFirst,setLogFirst} =useContext(AppContext)
+    const {token,setToken}=useContext(AppContext)
     const applyClick =(e)=>{
         if(!login){
           e.preventDefault()
           setLogFirst(true)
         }  }
     useEffect(()=>{
-        fetch("http://localhost:8000/api/v1/jobs/"+param.jobId)
+        fetch("http://localhost:8000/api/v1/jobs/"+param.jobId,{
+            headers: {
+                'Authorization': `Bearer ${token}`,
+               
+              }
+        })
         .then(res=>res.json())
-        .then(data=> setData(data.data))
+        .then(data=> setData(data.data[0]))
     },[])
   return (
    <div className="qualification">
@@ -27,7 +33,7 @@ const Qualification = () => {
             <div className="in-job">
                 <div className="des">
                     <h2>description</h2>
-                    <span>{data.description}</span>
+                    <span>{data.job_description}</span>
                 </div>
                 <div className="req">
                     <h2>requirements</h2>

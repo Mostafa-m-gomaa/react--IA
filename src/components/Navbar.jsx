@@ -31,8 +31,8 @@ const logOutClick =()=>{
               </Link>
             </li>
             <li>
-              <Link className="nav-link" aria-current="page" to="/about">
-                About
+              <Link className="nav-link" aria-current="page" to="/my-application">
+                My Application
               </Link>
             </li>
             <li>

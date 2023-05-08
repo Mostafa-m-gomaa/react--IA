@@ -18,7 +18,7 @@ const [searchData,setSearchData]=useState([])
 // .then(data=>console.log(data))
 //     },[])
 const searchDataBody =()=>{
-  if(searchData.length>0){
+  if(searchData.length> 0){
     return(
       <div className="user-search">
 
@@ -47,7 +47,7 @@ useEffect(()=>{
     },
   })
   .then(res=>res.json())
-  .then(data=>setSearchData(data))
+  .then(data=>setSearchData(data.data))
 },[])
   return (
     <div className="profile">

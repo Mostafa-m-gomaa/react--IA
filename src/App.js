@@ -2,7 +2,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import Footer from "./components/Footer";
-import About from "./components/About";
+import About from "./components/MyApp";
 import { Routes, Route, Link } from "react-router-dom";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
@@ -11,6 +11,7 @@ import JobsList from "./components/JobList";
 import JobForm from "./components/JobForm";
 import Profile from "./components/Profile";
 import Qualification from "./components/Qualification"
+import MyApp from "./components/MyApp";
 
 
 export const AppContext=createContext()
@@ -40,9 +41,13 @@ function App() {
   }
   
   },[login])
+
   useEffect(()=>{
     if (sessionStorage.getItem("id")){
       setId(sessionStorage.getItem("id"))
+  }
+  else {
+    setId("")
   }
   
   },[login])
@@ -63,7 +68,7 @@ function App() {
   <div className="rect4"></div>
   <div className="rect5"></div>
 </div>
-  </div> :null}
+  </div> : null}
 
  {logFirst ? <div className="log-first">
     <span>please login first</span>
@@ -82,7 +87,7 @@ function App() {
         />
         <Route path="login" element={<Login />} />
         <Route path="sign-up" element={<SignUp />} />
-        <Route path="about" element={<About />} />
+        <Route path="my-application" element={<MyApp/>} />
         <Route path="job/:jobId" element={<JobForm />} />
         <Route path="my-profile/:userId" element={<Profile />} />
         <Route path="qualify/:jobId" element={<Qualification />} />

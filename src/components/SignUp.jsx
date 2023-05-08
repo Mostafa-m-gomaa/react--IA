@@ -15,6 +15,7 @@ const SignUp = () => {
   const [name,setName]=useState("")
   const [email,setEmail]=useState("")
   const [password,setPassword]=useState("")
+  const [confirmPassword,setConfirmPassword]=useState("")
   const [phone,setPhone]=useState("")
 
 
@@ -23,6 +24,9 @@ const SignUp = () => {
   }
   const handlePassword =(e)=>{
     setPassword(e.target.value)
+  }
+  const handleConfirmPassword =(e)=>{
+    setConfirmPassword(e.target.value)
   }
   const handleName =(e)=>{
     setName(e.target.value)
@@ -52,7 +56,8 @@ const SignUp = () => {
             "name":name,
             "email":email,
             "password":password,
-            "phone":phone
+            "phone":phone,
+            "passwordConfirm":confirmPassword
         }),
       })
       .then(res=>res.json())
@@ -60,15 +65,17 @@ const SignUp = () => {
         
         history("/login")
         setSpinner(false)
+
      
     
       } else {
       
      
       setSpinner(false)
+      console.log(response)
       }
     } catch (error) {
-   
+    
       setSpinner(false)
     
     }
@@ -92,6 +99,7 @@ fetch("http://localhost:8000/api/v1/users")
 
             <input value={email} onChange={handleEmail} type='text' placeholder='Email'/>
             <input value={password} onChange={handlePassword} type='password' placeholder='Password'/>
+            <input value={confirmPassword} onChange={handleConfirmPassword} type='password' placeholder='Password'/>
             <input value={name} onChange={handleName} type='text' placeholder='Your Name'/>
             <input value={phone} onChange={handlePhone} type='text' placeholder='Phone Number'/>
            

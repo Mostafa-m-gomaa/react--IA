@@ -19,7 +19,7 @@ function JobsList() {
   const getjobs = () => {
     fetch(api_url)
       .then((res) => res.json())
-      .then((data) => setJobs(data));
+      .then((data) => setJobs(data.data));
   };
 
 
@@ -48,6 +48,7 @@ function JobsList() {
     })
   }
 
+  
   
 
   useEffect(() => {
